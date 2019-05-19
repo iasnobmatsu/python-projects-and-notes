@@ -65,9 +65,12 @@ def wordProb(word):
 ```
     
 Put all parts together to return a possible correct word.
-```def spellingCorrection(word):
-    potential_correct_freq_list=[frequencies[word]/sum(frequencies.values()) for word in spellingCorrectProb(word)]
-    potential_correct_freq_dict={frequencies[word]/sum(frequencies.values()):word for word in spellingCorrectProb(word)}
+```
+def spellingCorrection(word):
+    potential_correct_freq_list=
+    [frequencies[word]/sum(frequencies.values()) for word in spellingCorrectProb(word)]
+    potential_correct_freq_dict=
+    {frequencies[word]/sum(frequencies.values()):word for word in spellingCorrectProb(word)}
     best_match=max(potential_correct_freq_list)
     return potential_correct_freq_dict[best_match]
 ```
