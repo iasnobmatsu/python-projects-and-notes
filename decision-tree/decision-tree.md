@@ -3,10 +3,12 @@ A Decision Tree is a tree-shaped diagram for making predictions or decisions.
 
 ### CART: Classification and Regression Trees
 classification: where the result of tree is discrete.
+
 regression: where the result of tree is continuous.
 
 ### Splitting
 splitting given data into a tree structure based on cost of splitting.
+
 **Greedy splitting** calculates cost of splitting for all attributes in a dataset and chooses the one with minimun cost as next splitting node, repeat until node is data. 
 There are many ways to split a tree.
 - Gini
