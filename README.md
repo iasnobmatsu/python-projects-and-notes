@@ -4,3 +4,4 @@ This is where I will record my learning process for machine learning/related top
 ### index of topics
 - [Bayes Theorem](bayes-theorem/bayes.md)
 - [Decision Tree](decision-tree/decision-tree.md)
+- [K Nearest Neighbours](KNN/KNN.md)
