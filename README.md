@@ -1,7 +1,7 @@
-# Machine Learning Notes
-This is where I will record my learning process for machine learning/related topics. Most algorithms are implemented using Python.
+# python projects
+where I store all my notes/projects in python
 
-### index of topics
+### machine learning
 - [Bayes Theorem](bayes-theorem/bayes.md)
 - [Decision Tree](decision-tree/decision-tree.md)
 - [K Nearest Neighbours](KNN/KNN.md)
