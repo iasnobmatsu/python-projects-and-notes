@@ -11,10 +11,15 @@ A sample html output is available at [here](sampleoutput.html).
 The outputs will look like these:
 
 - A sample input jpg file
+
 ![inputdeku](inputdeku.jpg)
+
 - A sample output html page
+
 ![deku](deku.jpg)
+
 - Another sample output page
+
 ![melon](melon.jpg)
 
 
