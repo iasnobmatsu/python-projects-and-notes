@@ -1,0 +1,55 @@
+{% extends "layout.html"%}
+{% block content%}
+    <div class="post bg-light p-2 my-2">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}  
+            <legend class='m-2'>Login to Pepper</legend>
+            <div class="form-group">
+                    <div class="form-group">
+                            {{ form.email.label(class="form-control-label")}}
+                            {% if form.email.errors %}
+                            {{ form.email(class="form-control-lg form-control is-invalid")}}
+                            <div class="invalid-feedback">
+                                {% for error in form.email.errors%}
+                                    <span>{{error}}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.email(class="form-control-lg form-control")}}
+                            {% endif %}
+                    </div>
+                    <div class="form-group">
+                            {{ form.password.label(class="form-control-label")}}
+                            {% if form.password.errors %}
+                            {{ form.password(class="form-control-lg form-control is-invalid")}}
+                            <div class="invalid-feedback">
+                                {% for error in form.password.errors%}
+                                <span>{{error}}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.password(class="form-control-lg form-control")}}
+                            {% endif %}
+                    </div>  
+                    <div class="form-check">
+                        {{form.remember(class="form-check-input")}}
+                        {{form.remember.label(class="form-check-label")}}
+                    </div>                      
+            </div>
+            <div class="form-group">
+                <button class="btn btn-outline-info">Login</button>
+            </div>
+           
+        </form>
+
+    </div> 
+    <div class="border-top pt-4">
+        <small class="text-secondary">
+            Do not have an account yet?<a class="ml-2" href="{{url_for("signup")}}">Sign Up!</a>
+        </small>
+        <br>
+        <small class="text-secondary"> 
+            <a href="#">Forgot Password</a>
+        </small>
+</div>
+{% endblock content%}

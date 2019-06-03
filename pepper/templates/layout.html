@@ -34,18 +34,18 @@
     <div class="collapse navbar-collapse" id="navbarspan">
       <ul class="navbar-nav mr-auto mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="../">Home</a>
+          <a class="nav-link" href="{{url_for('home')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../explore" >Explore</a>
+          <a class="nav-link" href="{{url_for('explore')}}" >Explore</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
+          <a class="nav-link" href="{{url_for('signup')}}">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" >Login</a>
+          <a class="nav-link" href="{{url_for('login')}}" >Login</a>
         </li>
       </ul>
     </div>
@@ -64,6 +64,13 @@
   </div>
           
   <div id="content" class="col-xs-12 col-sm-7 mx-auto my-5" style="display:block" >
+   {% with messages=get_flashed_messages(with_categories=true) %}
+    {% if messages%}
+      {% for category, message in messages%}
+        <div class="alert alert-{{category}}"> {{message}}</div>
+      {%endfor%}
+    {%endif%}
+   {% endwith%}
    {% block content %} {% endblock %}
   </div>
 
