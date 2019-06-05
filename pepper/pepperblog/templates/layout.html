@@ -41,12 +41,19 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="{{url_for('signup')}}">Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{url_for('login')}}" >Login</a>
-        </li>
+        {% if current_user.is_authenticated %}
+         <li class="nav-item">
+            <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+          </li>
+        {% else %}
+         <li class="nav-item">
+            <a class="nav-link" href="{{url_for('signup')}}">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('login')}}" >Login</a>
+          </li>
+        {% endif %}
+       
       </ul>
     </div>
   </nav>
@@ -55,7 +62,7 @@
   <div id="sidebar" class=" bg-light p-3 col-xs-12 col-sm-2 ml-sm-4" >
     <p>Username</p>
     <div>
-      <div class="my-2"><a class="sidebarlink" href="#">Account</a></div>
+      <div class="my-2"><a class="sidebarlink" href="{{url_for('account')}}">Account</a></div>
       <div class="my-2"><a class="sidebarlink" href="#">Posts</a></div>
       <div class="my-2"><a class="sidebarlink" href="#">Likes</a></div>
     </div>
