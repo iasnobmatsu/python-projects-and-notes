@@ -1,8 +1,11 @@
 from flask import render_template, url_for, flash, redirect, request
 from pepperblog import app, db, bcrypt
-from pepperblog.forms import RegistrationForm, LoginForm
+from pepperblog.forms import RegistrationForm, LoginForm, UpdateAccountForm, NewPostForm
 from pepperblog.models import User, Post
 from flask_login import login_user, logout_user,current_user, login_required
+import secrets
+import os
+from PIL import Image
 
 #export FLASK_APP=blog.py
 #flask run
@@ -75,10 +78,50 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-@app.route("/account")
+
+def saveProfile(pic):
+    rad=secrets.token_hex(8)
+    _,file_ext=os.path.splitext(pic.filename)
+    picture_to_save=rad+file_ext
+    picture_path=os.path.join(app.root_path,"static/profiles/", picture_to_save)
+    pic_image=Image.open(pic)
+    pic_image.thumbnail((180,180))
+    pic_image.save(picture_path)
+    return picture_to_save
+
+@app.route("/account", methods=['GET','POST'])
 @login_required
 def account():
     # if current_user.is_authenticated:
-    return render_template("account.html", title="Pepper: Account")
+    form=UpdateAccountForm()
+    if form.validate_on_submit():
+        current_user.username=form.username.data
+        current_user.email=form.email.data
+        if form.picture.data:
+            pic=saveProfile(form.picture.data)
+            old_pic=current_user.image_file
+            current_user.image_file=pic
+            if old_pic!="default.jpg":
+                old_path=os.path.join(app.root_path, "static/profiles/",old_pic)
+                os.remove(old_path)
+    
+        db.session.commit()
+        flash("Account updated successfully.",'success' )
+        return redirect(url_for("account")) #post get redirect pattern
+    elif request.method=="GET":
+        form.username.data=current_user.username
+        form.email.data=current_user.email
+    profile=url_for("static", filename="profiles/"+current_user.image_file)
+    return render_template("account.html", form=form, title="Pepper: Account",profile=profile)
     # else:
     #     return redirect(url_for('login'))
+
+
+@app.route("/newpost", methods=["GET", "POST"])
+@login_required
+def newpost():
+    form=NewPostForm()
+    if form.validate_on_submit():
+        flash("Post sent.")
+        return redirect(url_for('home'))
+    return render_template("newpost.html", form=form, title="Pepper: Creat New Post")

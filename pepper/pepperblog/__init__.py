@@ -15,3 +15,9 @@ login_manager.login_view="login"
 login_manager.login_message_category="danger"
 
 from pepperblog import routes
+
+
+##check the database
+#from pepperblog import db
+#from pepperblog.models import User
+#User.query.all()

@@ -1,7 +1,13 @@
 *,html,body{
     font-family: 'Playfair Display', serif;
 }
-
+.profile-wrapper{
+    border-radius:10%;
+    width:110px; 
+    height:110px; 
+    overflow: hidden;
+    
+}
 #sidebar{
     position:fixed;
     top:15%;
