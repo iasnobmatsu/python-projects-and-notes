@@ -3,7 +3,7 @@
 {% block content%}
 <form method="POST" action="">
         {{ form.hidden_tag() }}  
-        <legend class='m-2'>Create A New Post</legend>
+        <legend class='m-2'>{{legend}}</legend>
         <div class="form-group">
                 <div class="form-group">
                         {{ form.title.label(class="form-control-label")}}
@@ -21,14 +21,14 @@
                 <div class="form-group">
                         {{ form.article.label(class="form-control-label")}}
                         {% if form.article.errors %}
-                        {{ form.article(class="form-control row-5form-control is-invalid")}}
+                        {{ form.article(class="form-control row-5 form-control is-invalid")}}
                         <div class="invalid-feedback">
                             {% for error in form.article.errors%}
                             <span>{{error}}</span>
                             {% endfor %}
                         </div>
                         {% else %}
-                        {{ form.article(class="row-md-5 form-control form-control")}}
+                        {{ form.article(class="form-control form-control",rows="10")}}
                         {% endif %}
                 </div>                        
         </div>

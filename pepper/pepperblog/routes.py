@@ -1,4 +1,4 @@
-from flask import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request, abort
 from pepperblog import app, db, bcrypt
 from pepperblog.forms import RegistrationForm, LoginForm, UpdateAccountForm, NewPostForm
 from pepperblog.models import User, Post
@@ -11,26 +11,11 @@ from PIL import Image
 #flask run
 #export FLASK_DEBUG=1--debug mode update without exit
 
-#dummy data
-posts=[
-    {
-        "user":"Ramon Cajal",
-        "title":"Purkinje Cell Structure",
-        "content":"Mitch Prinstein is the John Van Seters Distinguished Professor of Psychology and Neuroscience, and a member of the Clinical Psychology Program. Mitch’s research uses a developmental psychopathology framework to understand how adolescents’ interpersonal experiences, particularly among peers,  are associated with depression, self-injury, and health risk behaviors.  Mitch’s work has two areas of focus.",
-        "date":"May 31, 1880"
-    },{
-        "user":"Mitch Prinstein",
-        "title":"Peer Relations",
-        "content":"rrrrrrrrrr\nr\n\n\n\n\n\rrr",
-        "date":"August 2, 2019"
-    }
-]
-
 
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template('home.html',posts=posts, title="Pepper: Blog, Share, More")
+    return render_template('home.html',posts=Post.query.all(), title="Pepper: Blog, Share, More")
 
 
 @app.route("/explore")
@@ -122,6 +107,46 @@ def account():
 def newpost():
     form=NewPostForm()
     if form.validate_on_submit():
-        flash("Post sent.")
+        post=Post(title=form.title.data, content=form.article.data,author=current_user)
+        db.session.add(post)
+        db.session.commit()
+        flash("Post sent.","success")
         return redirect(url_for('home'))
-    return render_template("newpost.html", form=form, title="Pepper: Creat New Post")
+    return render_template("newpost.html", legend="New Post", form=form, title="Pepper: Creat New Post")
+
+@app.route("/post/<int:post_id>")
+def post(post_id):
+    post=Post.query.get_or_404(post_id)
+    if post.author==current_user:
+        return render_template("post.html", title=post.title, post=post,edit="Edit",delete="Delete")
+    return render_template("post.html", title=post.title, post=post,edit="", delete="")
+
+
+@app.route("/post/<int:post_id>/edit",methods=["GET", "POST"])
+@login_required
+def edit(post_id):
+    post=Post.query.get_or_404(post_id)
+    if post.author!=current_user:
+        abort(403)
+    form=NewPostForm()
+    if form.validate_on_submit():
+        post.title=form.title.data
+        post.content=form.article.data
+        db.session.commit()
+        flash("Updated", "success")
+        return redirect(url_for('post',post_id=post.id))
+    elif request.method=="GET":
+        form.title.data=post.title
+        form.article.data=post.content
+    return render_template("newpost.html", legend="Edit Post", form=form, title="Pepper: Edit Post")
+    
+@app.route("/post/<int:post_id>/delete",methods=["GET", "POST"])
+@login_required
+def delete(post_id):
+    post=Post.query.get_or_404(post_id)
+    if post.author!=current_user:
+        abort(403)
+    db.session.delete(post)
+    db.session.commit()
+    flash("Post deleted","success")
+    return redirect(url_for("home"))

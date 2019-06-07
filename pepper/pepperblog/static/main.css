@@ -6,7 +6,13 @@
     width:110px; 
     height:110px; 
     overflow: hidden;
-    
+}
+
+.profile-post-wrapper{
+    border-radius:10%;
+    width:70px; 
+    height:70px; 
+    overflow: hidden;
 }
 #sidebar{
     position:fixed;
