@@ -12,11 +12,9 @@ where I store all my python notes/projects
     - converts image to text/string format
     - given a input file in `.jpg` or `.png` output a `.html` file and a `.txt` file
     - the html code could be copy-pasted to use in web pages
+- [Spelling Checker](bayes-theorem/bayes.md)
+    - Use Bayes's Theorem to implement a spelling checker given a database of words
 
-### machine learning
-- [Bayes Theorem](bayes-theorem/bayes.md)
-- [Decision Tree](decision-tree/decision-tree.md)
-- [K Nearest Neighbours](KNN/KNN.md)
-- [Linear Regression](linear-reg/LR.md)
+
 
 
