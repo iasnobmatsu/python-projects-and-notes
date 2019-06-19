@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2 class="text-dark">{{posts.total}} posts by {{username}}</h2>
+
+
+    {% for post in posts.items %}
+    <div class="post border border-muted p-3 my-4">
+        <div class="media">
+            <div>
+                <h4 class="text-secondary"><a class="card-link text-secondary" href="{{url_for('post', post_id=post.id)}}">{{post.title}}</a></h4>
+                <p class="text-secondary ">by <a class="text-info card-link" href="{{url_for('userpage',username=username)}}">{{post.author.username}}</a> on {{post.date_posted.strftime('%d-%b-%Y')}}</p>   
+            </div>
+            <div class="profile-post-wrapper pull-right ml-auto">
+                 <img width="70px" class="profile-image" src="{{url_for('static',filename='profiles/'+post.author.image_file)}}">
+            </div>
+        </div>
+        <div class="border-top pt-2" style="max-height:800px;overflow:hidden">
+            {% if post.ismarkdown%}
+            <div style="white-space: pre-line;overflow:auto">
+            {{post.content|markdown}}
+            </div>
+            {%else%}
+            <p class="text-secondary" style="white-space: pre-line">{{post.content}}</p>
+            {%endif%}
+        </div>
+        <hr>
+    <a class="btn btn-outline-info" href="{{url_for('post', post_id=post.id)}}">Read More</a>
+    </div>
+    {% endfor%}
+
+
+    <div class="media border-bottom">
+            <p class="mx-4 text-secondary">pages</p>
+            <div>
+                    {% for page_num in posts.iter_pages(left_edge=1,right_edge=1, left_current=1,right_current=2) %}
+                    {% if page_num%}
+                        {% if page_num==posts.page %}
+                            <a class="card-link bg-secondary text-white px-2 py-1" style="border-radius:10%" href="{{url_for('userpage',username=username, page=page_num)}}">{{page_num}}</a>
+                        {%else%}
+                            <a class="card-link text-secondary" href="{{url_for('userpage',username=username, page=page_num)}}">{{page_num}}</a>
+                        {%endif%}
+                    {%else%}
+                        <a class="card-link text-secondary">-</a>
+                    {%endif%}
+                    {% endfor %}
+            </div>
+    
+        </div>
+{% endblock content%}
