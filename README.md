@@ -2,10 +2,10 @@
 where I store all my python notes/projects 
 
 ### projects
-- [Blog: Pepper](https://github.com/iasnobmatsu/Blog-Pepper)
+- [Blog: Pepper](pepper/README.md)
     - a minimalisitic blog system with python and flask
     - interactive and responsive designs, useful features, and ability to customize posts with MarkDown
-- [Archive of Our Own Scraper](https://github.com/iasnobmatsu/ao3-fiction-scraper)
+- [Archive of Our Own Scraper](ao3.py)
     - downloads a fanfic as `name.txt` given a link to the fic or an fic id
     - will add more features soon 
 - [image to html/txt converter](imgtotext/imgtotxt.md)
