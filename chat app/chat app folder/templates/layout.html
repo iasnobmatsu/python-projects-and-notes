@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}"/>
     <link rel="icon" type="image/png" href="{{url_for('static',filename='icon.jpg')}}">
-    <link href="https://fonts.font.im/css?family=Abel|Gloria+Hallelujah|Source+Serif+Pro" rel="stylesheet">
     <script src="https://use.fontawesome.com/a59be35b9f.js"></script>
     
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -24,12 +23,12 @@
 
 
   <!-- navbar -->
-  <nav class="navbar navbar-expand-sm navbar-light border-bottom border-secondary p-4">
+  <nav class="navbar navbar-expand-sm navbar-light border-bottom border-info bg-light p-4">
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarspan" 
     aria-controls="navbarspan" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#" style="font-family: 'Gloria Hallelujah', cursive; font-size:30px">PEPPER</a>
+    <a class="navbar-brand" href="#">PEPPER</a>
   
     <div class="collapse navbar-collapse" id="navbarspan">
       <ul class="navbar-nav mr-auto mt-lg-0 pt-1">
@@ -40,20 +39,20 @@
           <a class="nav-link" href="{{url_for('explore')}}" >Explore</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url_for('newpost')}}" >&#10010; New</a>
+          <a class="nav-link" href="{{url_for('newpost')}}" >&#10010;</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto mt-lg-0">
         {% if current_user.is_authenticated %}
          <li class="nav-item m-1">
-           <a class="btn btn-outline-dark px-2 py-1" href="{{url_for('logout')}}">Logout</a>
+           <a class="btn btn-outline-secondary px-2 py-1" href="{{url_for('logout')}}">Logout</a>
           </li>
         {% else %}
          <li class="nav-item m-1">
-            <a class="btn btn-outline-dark" href="{{url_for('signup')}}">Register</a>
+            <a class="btn btn-outline-secondary" href="{{url_for('signup')}}">Register</a>
           </li>
           <li class="nav-item m-1">
-            <a class="btn btn-outline-dark" href="{{url_for('login')}}" >Login</a>
+            <a class="btn btn-outline-secondary" href="{{url_for('login')}}" >Login</a>
           </li>
         {% endif %}
        
@@ -62,12 +61,12 @@
   </nav>
 
   <!--sidebar-->
-  <div id="sidebar" class=" border border-muted col-xs-12 col-sm-3 col-md-2 ml-sm-2 ml-md-5 p-3 " >
+  <div id="sidebar" class=" bg-light col-xs-12 col-sm-3 col-md-2 ml-sm-2 ml-md-5 p-3 " >
     <div>
       <h6 class="text-info">Welcome {{current_user.username}}!</h6>
-      <div class="my-2 border-bottom border-muted"><a class="sidebarlink" href="{{url_for('account')}}">Account</a></div>
-      <div class="my-2 border-bottom border-muted"><a class="sidebarlink" href="{{url_for('mypage')}}">Posts</a></div>
-      <div class="my-2 border-bottom border-muted"><a class="sidebarlink" href="{{url_for('likes')}}">Likes</a></div>
+      <div class="my-2 border-bottom border-info"><a class="sidebarlink" href="{{url_for('account')}}">Account</a></div>
+      <div class="my-2 border-bottom border-info"><a class="sidebarlink" href="{{url_for('mypage')}}">Posts</a></div>
+      <div class="my-2 border-bottom border-info"><a class="sidebarlink" href="{{url_for('likes')}}">Likes</a></div>
     </div>
     
   

@@ -33,14 +33,13 @@ def explore():
         if likes_query.first():
             for i in likes_query:
                 likes_num+=1
-            
-            top_posts.append((post,likes_num))
-                
-    
+                top_posts.append((post,likes_num))
+        else:
+            pass
     if len(top_posts)>50:
         top_posts=top_posts[:50]
     top_posts=sorted(top_posts, reverse=True, key=lambda post: post[1] )
-    return render_template('explore.html', title="Pepper:Explore",top_posts=top_posts)
+    return render_template('explore.html', title="Pepper:Explore",top_posts=top_posts,posts=posts)
 
 
 @app.route("/signup", methods=['GET','POST'])

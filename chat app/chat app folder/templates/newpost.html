@@ -3,9 +3,9 @@
 {% block content%}
 <form method="POST" action="">
         {{ form.hidden_tag() }}  
-        <legend class='my-3'>{{legend}}</legend>
+        <legend class='m-2'>{{legend}}</legend>
         <div class="form-group">
-                <div class="form-check my-4">
+                <div class="form-check m-2">
                     {{form.ismarkdown(class="form-check-input")}}
                     {{form.ismarkdown.label(class="form-check-label")}}
                 </div>     

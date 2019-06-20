@@ -1,16 +1,10 @@
 *,html,body{
-    font-family: 'Abel', sans-serif;
-}
-post{
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Playfair Display', serif;
 }
 img{
     width:70%;
     display:block;
     margin:auto;
-}
-.profile-wrapper img{
-    width:100%;
 }
 code{
     white-space: pre;
@@ -33,33 +27,26 @@ code{
 #sidebar{
     position:fixed;
     top:15%;
+    box-shadow: -5px -5px 5px #A0B9BF;
     border-radius:5px;
+    background-color:#EFF7FF;
     text-align:center;
-    
 }
-
 .navbar{
     font-family: 'Nanum Gothic Coding', monospace;
 }
 .sidebarlink{
     text-decoration:none;
-    color:#9B9FB5;
+    color:grey;
 }
 .sidebarlink:hover{
     text-decoration:none;
-    color:black;
-}
-.nav-link{
-    color:#9B9FB5;
-}
-.nav-rlink:hover{
-    text-decoration:none;
-    color:black;
+    color:green;
 }
 
 .post{
     border-radius:5px;
-
+    box-shadow: 2px 2px 0.5px rgb(221, 221, 221);
     
 }
 

@@ -1,8 +1,10 @@
 
 {% extends "layout.html" %}
 {% block content %}
-    <h2>PEPPER: A MINIMALISTIC BLOG ...</h2>
-
+    <h2 class="text-dark m-3">PEPPER: A MINIMALISTIC BLOG ...</h2>
+    <hr>
+    <hr>
+    <hr>
 
     {% for post in posts.items %}
     <div class="post border border-muted p-3 my-4" >
@@ -31,7 +33,7 @@
             {% endif%}
         </div>
         <hr>
-       <a class="btn btn-outline-info" href="{{url_for('post', post_id=post.id)}}">Read More</a>
+       <a class="btn btn-outline-dark" href="{{url_for('post', post_id=post.id)}}">Read More</a>
     </div>
     
     {% endfor%}

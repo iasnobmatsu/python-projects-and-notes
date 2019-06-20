@@ -1,7 +1,6 @@
-
 {% extends "layout.html" %}
 {% block content %}
-    <h2 class="text-dark">ALL POSTS {{username}}, {{posts.total}} TOTAL</h2>
+    <h2 class="text-dark">{{posts.total}} posts by {{username}}</h2>
 
 
     {% for post in posts.items %}
@@ -15,7 +14,7 @@
                  <img width="70px" class="profile-image" src="{{url_for('static',filename='profiles/'+post.author.image_file)}}">
             </div>
         </div>
-        <div class="border-top pt-2" style="max-height:hidden;overflow:hidden">
+        <div class="border-top pt-2" style="max-height:800px;overflow:hidden">
             {% if post.ismarkdown%}
             <div style="white-space: pre-line;overflow:auto">
             {{post.content|markdown}}
@@ -25,7 +24,7 @@
             {%endif%}
         </div>
         <hr>
-        <a class="btn btn-outline-info" href="{{url_for('post', post_id=post.id)}}">Read More</a>
+    <a class="btn btn-outline-info" href="{{url_for('post', post_id=post.id)}}">Read More</a>
     </div>
     {% endfor%}
 

@@ -1,7 +1,7 @@
 
 {% extends "layout.html" %}
 {% block content %}
-    <h2 class="text-dark">ALL POSTS {{username}}, {{posts.total}} TOTAL</h2>
+    <h2 class="text-dark">{{posts.total}} posts by {{username}}</h2>
 
 
     {% for post in posts.items %}
