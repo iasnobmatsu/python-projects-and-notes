@@ -59,7 +59,7 @@ most pages are available through the nav bar and the side bar
     - sign out current user
 
 some sample images
-![img1](intropics/sc1)
-![img2](intropics/sc2)
+![img1](intropics/sc1.jpg)
+![img2](intropics/sc2.jpg)
 
 
