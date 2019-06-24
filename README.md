@@ -1,5 +1,5 @@
 # Things I Write
-where I store all my python notes/projects 
+where I store all my notes/projects
 
 ### projects
 - [Personal Website](https://iasnobmatsu.github.io/)
