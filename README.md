@@ -1,4 +1,4 @@
-# Everything I Write with PYTHON
+# Things I Write
 where I store all my python notes/projects 
 
 ### projects
