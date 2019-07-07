@@ -2,7 +2,7 @@
 where I store all my notes/projects
 
 ### projects
-- [Iris Dataset Classification] (iris/iris_classification.ipynb)
+- [Iris Dataset Classification](iris/iris_classification.ipynb)
     - classify iris as three species 
     - Jupyter notebook
 - [Personal Website](https://iasnobmatsu.github.io/)
