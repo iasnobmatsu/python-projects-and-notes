@@ -1,5 +1,5 @@
-# Everything I Write with PYTHON
-where I store all my python notes/projects 
+# Things I Write
+where I store all my notes/projects
 
 ### projects
 - [Iris Dataset Classification] (iris/iris_classification.ipynb)
