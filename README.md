@@ -3,8 +3,8 @@ where I store all my notes/projects
 
 ### projects
 - [Hand Written Digits Recognition] (digits/digits_recognizer.ipynb)
-    -classify 8*8 digits image
-    -Jupyter notebook
+    - classify 8*8 digits image
+    - Jupyter notebook
 - [Iris Dataset Classification] (iris/iris_classification.ipynb)
     - classify iris as three species 
     - Jupyter notebook
