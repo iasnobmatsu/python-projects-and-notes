@@ -2,6 +2,8 @@
 where I store all my notes/projects
 
 ### projects
+- [Predict How Happy people feel in general](happiness/predict_happiness.ipynb)
+    - My solution for [this problem](https://tianchi.aliyun.com/competition/entrance/231702/introduction?spm=5176.12281949.1003.1.493e2448Z3zvKZ)
 - [Hand Written Digits Recognition](digits/digits_recognizer.ipynb)
     - classify 8*8 digits image
     - Jupyter notebook
