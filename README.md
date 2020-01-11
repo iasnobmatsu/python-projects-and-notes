@@ -1,5 +1,5 @@
 # Things I Write
-where I store my notes/projects
+where I store some of my notes/projects
 
 ### projects
 
