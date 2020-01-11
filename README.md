@@ -28,8 +28,10 @@ where I store all my notes/projects
 - [Blog: Pepper](pepper/README.md)
     - a minimalisitic blog system with python and flask
     - interactive and responsive designs, useful features, and ability to customize posts with MarkDown
-- [2048 in Javascript/JQuery](2048screenshot.png)
+- 2048 in Javascript/JQuery
     - my implementation of 2048 game
+    - ![2048](2048screenshot.png)
+
     
 #### Python Scripts
 - [Archive of Our Own Scraper](ficLoader.py)
