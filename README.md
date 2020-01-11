@@ -1,10 +1,7 @@
 # Things I Write
-where I store all my notes/projects
+where I store my notes/projects
 
 ### projects
-
-#### Algorithm Related
-- [Notes for intro algorithm]()
 
 #### Data Science Related
 - [Predict How Happy people feel in general](happiness/predict_happiness.ipynb)
@@ -28,9 +25,6 @@ where I store all my notes/projects
 - [Blog: Pepper](pepper/README.md)
     - a minimalisitic blog system with python and flask
     - interactive and responsive designs, useful features, and ability to customize posts with MarkDown
-- 2048 in Javascript/JQuery
-    - my implementation of 2048 game
-    - ![2048](2048screenshot.png)
 
     
 #### Python Scripts
