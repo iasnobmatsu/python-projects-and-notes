@@ -4,6 +4,10 @@ where I store some of my notes/projects
 ### projects
 
 #### Data Science Related
+- [Binary distribution web simulation](sim/bin/index.html)
+  - distribution simulation and parameter calculation.
+- [Poisson distribution web simulation](sim/poisson/index.html)
+  - distribution simulation and parameter calculation.
 - [Predict How Happy people feel in general](happiness/predict_happiness.ipynb)
     - My solution for [this problem](https://tianchi.aliyun.com/competition/entrance/231702/introduction?spm=5176.12281949.1003.1.493e2448Z3zvKZ)
 - [Hand Written Digits Recognition](digits/digits_recognizer.ipynb)
