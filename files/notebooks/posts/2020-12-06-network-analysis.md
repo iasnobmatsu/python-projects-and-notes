@@ -1,9 +1,4 @@
----
-layout: post
-title:  "Psychological Networks in R"
-date:   2020-12-06
-excerpt: "building psychological networks in R, interpreting networks, network invariances, and bridges among network communities"
----
+
 
 Reference: [Network Analysis Webinar Tutorial](http://www.louisvilleeatlab.com/stats.html).
 

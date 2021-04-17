@@ -1,9 +1,4 @@
----
-layout: post
-title:  "Notes: Exploratory Factor Analysis Introduction"
-date:   2020-12-05
-excerpt: "what is factor analysis, history of factor analysis, comparing factor analysis with principal component analysis, and how to conduct exploratory factor analysis in SAS"
----
+
 
 ###  **Correlations**
 <hr>

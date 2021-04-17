@@ -1,9 +1,4 @@
----
-layout: post
-title:  "R Basics: Descriptive Statsitics, Visulizations, and Linear Models"
-date:   2020-12-03
-excerpt: "descriptive statistics, histograms, boxplots, scatterplot matrices, correlation heatmaps, linear model assumptions, and model selection processes"
----
+
 
 #### Libraries
 

@@ -1,9 +1,4 @@
----
-layout: post
-title:  "Tweet Classification with NLP"
-date:   2020-08-15
-excerpt: "text cleaning using regular expressions, NLP visuLization with wordclouds, naive bayes, logistic regression, and LSTM models for binary text classification in python"
----
+
 
 <a id='top'></a>
 # Introduction

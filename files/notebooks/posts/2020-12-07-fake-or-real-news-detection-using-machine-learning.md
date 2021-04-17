@@ -1,9 +1,4 @@
----
-layout: post
-title:  "Real or Fake News Detection with Machine Learning"
-date:   2020-12-07
-excerpt: "natural language processing, text data cleaning and visualization, using machine learning models including logistic regression, support vector machine, naive-bayes, and bi-directional LSTN neural networks to classify news in python"
----
+
 
 The code and formal latex report of this project can be found on this [github link](https://github.com/iasnobmatsu/COMP-562-Final-Project).
 

@@ -1,17 +1,12 @@
----
-layout: post
-title:  "Web Scraping with Python: Using MyAnimeList as An Example"
-date:   2020-12-30
-excerpt: "this post covers how to scrape data from static HTML pages with Python and BeautifulSoup (minor need of regular expressions) and also covers how to scrape dynamically generated HTML pages with the additional help of the selenium library"
----
+
 
 Disclaimer: The following code for scraping MAL was written on Dec 30th, 2020. The code is not garanteed to work if after the stated time, website structures for MAL changed. I will make an effort to update the code as often as possible. However, I did find being able to write the following code allows me to scrape most websites I want. 
 
-To downlaod the ipynb (python jupyter notebook) script I wrote for this post, please click [here](../html_assets/MALscrape/MALscrapper.ipynb).
+To downlaod the ipynb (python jupyter notebook) script I wrote for this post, please click [here](../assets/MALscrape/MALscrapper.ipynb).
 
-To download the MAL top 3000 anime list csv file (collected Dec 29, 2020), please click [here](../html_assets/MALscrape/MALtop3000.csv).
+To download the MAL top 3000 anime list csv file (collected Dec 29, 2020), please click [here](../assets/MALscrape/MALtop3000.csv).
 
-To download my own MAL anime list csv file (collected Dec 30, 2020), please click [here](../html_assets/MALscrape/iasnobmatsuMAL.csv).
+To download my own MAL anime list csv file (collected Dec 30, 2020), please click [here](../assets/MALscrape/iasnobmatsuMAL.csv).
 
 ### Scraping Static HTML: Using MAL Top Animes as An Example
 
