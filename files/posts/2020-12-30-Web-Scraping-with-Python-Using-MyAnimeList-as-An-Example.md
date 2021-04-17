@@ -7,11 +7,11 @@ excerpt: "this post covers how to scrape data from static HTML pages with Python
 
 Disclaimer: The following code for scraping MAL was written on Dec 30th, 2020. The code is not garanteed to work if after the stated time, website structures for MAL changed. I will make an effort to update the code as often as possible. However, I did find being able to write the following code allows me to scrape most websites I want. 
 
-To downlaod the ipynb (python jupyter notebook) script I wrote for this post, please click [here]({{site.baseurl}}/html_assets/MALscrape/MALscrapper.ipynb).
+To downlaod the ipynb (python jupyter notebook) script I wrote for this post, please click [here](../html_assets/MALscrape/MALscrapper.ipynb).
 
-To download the MAL top 3000 anime list csv file (collected Dec 29, 2020), please click [here]({{site.baseurl}}/html_assets/MALscrape/MALtop3000.csv).
+To download the MAL top 3000 anime list csv file (collected Dec 29, 2020), please click [here](../html_assets/MALscrape/MALtop3000.csv).
 
-To download my own MAL anime list csv file (collected Dec 30, 2020), please click [here]({{site.baseurl}}/html_assets/MALscrape/iasnobmatsuMAL.csv).
+To download my own MAL anime list csv file (collected Dec 30, 2020), please click [here](../html_assets/MALscrape/iasnobmatsuMAL.csv).
 
 ### Scraping Static HTML: Using MAL Top Animes as An Example
 
@@ -32,7 +32,7 @@ import pandas as pd
 
 #### Helper Function to Parse One Anime Row
 
-![]({{site.baseurl}}/images/MALscrape/static.png)
+![](../images/MALscrape/static.png)
 
 Looking at the html of [https://myanimelist.net/topanime.php](https://myanimelist.net/topanime.php) (using chrome, right click and select inspect, navigate to the element section, and you will see the HTML), each anime is a tr (table row) of the table. Within each row, name of anime is wrapped in class anime_ranking_h3, related information in class information, and score in class score. These can be scraped with beautifulsoup rather simply using the select() function. Then the text can be cleaned.
 
@@ -265,7 +265,7 @@ Dynamic HTML is different from static HTML as the static HTML is rendered from H
 
 #### Helper Function to Get One Row of MAL User List
 
-![]({{site.baseurl}}/images/MALscrape/dynamic.png)
+![](../images/MALscrape/dynamic.png)
 
 Similar to the getOneRow function(), this function parses specific data for one anime. This step is the same regardless of static or dynamic HTML.
 

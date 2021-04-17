@@ -50,14 +50,14 @@ median(mtcars$mpg)
 hist(mtcars$mpg, breaks=6)
 ```
 
-![]({{site.baseurl}}/images/allcode_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](../images/allcode_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 ``` r
 # box plot, horizontal argument sets direction
 boxplot(mtcars$mpg, horizontal = TRUE)
 ```
 
-![]({{site.baseurl}}/images/allcode_files/figure-markdown_github/unnamed-chunk-3-2.png)
+![](../images/allcode_files/figure-markdown_github/unnamed-chunk-3-2.png)
 
 ``` r
 # group mtcars by am
@@ -89,7 +89,7 @@ sd(mpg~am, data=mtcars)
 boxplot(mpg~am, data=mtcars, horizontal=TRUE)
 ```
 
-![]({{site.baseurl}}/images/allcode_files/figure-markdown_github/unnamed-chunk-3-3.png)
+![](../images/allcode_files/figure-markdown_github/unnamed-chunk-3-3.png)
 
 #### Histogram
 
@@ -98,7 +98,7 @@ hist(mtcars$mpg,prob=T, c='lightblue')
 lines(density(mtcars$mpg,na.rm=TRUE))
 ```
 
-![]({{site.baseurl}}/images/allcode_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](../images/allcode_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 #### Scatterplot Matrix
 
@@ -116,7 +116,7 @@ panel.cor <- function(x, y){
 pairs(mtcars[1:6], upper.panel=panel.smooth, lower.panel=panel.cor)
 ```
 
-![]({{site.baseurl}}/images/allcode_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](../images/allcode_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 #### T-test
 
@@ -165,7 +165,7 @@ corr=cor(mtcars)
 corrplot.mixed(corr,order = "hclust", tl.col='black', tl.cex=0.4)
 ```
 
-![]({{site.baseurl}}/images/allcode_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](../images/allcode_files/figure-markdown_github/unnamed-chunk-7-1.png)
 
 #### Linear Regression
 
@@ -178,7 +178,7 @@ mpgwtmodel=lm(mpg~wt, data=mtcars)
 abline(mpgwtmodel)
 ```
 
-![]({{site.baseurl}}/images/allcode_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](../images/allcode_files/figure-markdown_github/unnamed-chunk-8-1.png)
 
 ``` r
 # lm coefficients
@@ -219,7 +219,7 @@ summary(mpgwtmodel)
 plot(mpgwtmodel, 1:2)
 ```
 
-![]({{site.baseurl}}/images/allcode_files/figure-markdown_github/unnamed-chunk-9-1.png)![]({{site.baseurl}}/images/allcode_files/figure-markdown_github/unnamed-chunk-9-2.png)
+![](../images/allcode_files/figure-markdown_github/unnamed-chunk-9-1.png)![](../images/allcode_files/figure-markdown_github/unnamed-chunk-9-2.png)
 
 ``` r
 # added variable plot for more than 1 predictors
@@ -227,7 +227,7 @@ modmpgwtcyl=lm(mpg~wt+cyl, data=mtcars)
 avPlots(modmpgwtcyl)
 ```
 
-![]({{site.baseurl}}/images/allcode_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](../images/allcode_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
 #### Residuals and Outliers
 

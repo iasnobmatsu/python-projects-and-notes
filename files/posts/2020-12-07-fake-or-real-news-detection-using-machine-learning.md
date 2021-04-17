@@ -232,7 +232,7 @@ plt.pie([real.shape[0], fake.shape[0]],labels=['real news', 'fake news'], shadow
 
 
 
-![png]({{site.baseurl}}/images/models_files/models_7_1.png)
+![png](../images/models_files/models_7_1.png)
 
 
 distribution of topics in fake/real news datasets
@@ -252,7 +252,7 @@ sns.countplot(x='subject', data=fake, ax=a[1])
 
 
 
-![png]({{site.baseurl}}/images/models_files/models_9_1.png)
+![png](../images/models_files/models_9_1.png)
 
 
 news text length distributions
@@ -278,7 +278,7 @@ sns.distplot(fake['textlength'], ax=a[1])
 
 
 
-![png]({{site.baseurl}}/images/models_files/models_11_1.png)
+![png](../images/models_files/models_11_1.png)
 
 
 Word cloud of frequent appearing words in real vs fake news.
@@ -306,7 +306,7 @@ plt.show()
 ```
 
 
-![png]({{site.baseurl}}/images/models_files/models_12_0.png)
+![png](../images/models_files/models_12_0.png)
 
 
 Get word frequencies according to the wordclouds, plot the top 50 frequent words
@@ -337,7 +337,7 @@ plt.bar(list(sortedfreqreal.keys())[:50],list(sortedfreqreal.values())[:50], col
 
 
 
-![png]({{site.baseurl}}/images/models_files/models_15_1.png)
+![png](../images/models_files/models_15_1.png)
 
 
 
@@ -356,7 +356,7 @@ plt.bar(list(sortedfreqfake.keys())[:50],list(sortedfreqfake.values())[:50], col
 
 
 
-![png]({{site.baseurl}}/images/models_files/models_16_1.png)
+![png](../images/models_files/models_16_1.png)
 
 
 #### **Preprocessing**
@@ -527,7 +527,7 @@ sns.heatmap(lrcm, annot=labels, fmt='', cmap="GnBu")
 
 
 
-![png]({{site.baseurl}}/images/models_files/models_30_2.png)
+![png](../images/models_files/models_30_2.png)
 
 
 naive bayes
@@ -568,7 +568,7 @@ sns.heatmap(nb_cm, annot=labels, fmt='', cmap="GnBu")
 
 
 
-![png]({{site.baseurl}}/images/models_files/models_32_2.png)
+![png](../images/models_files/models_32_2.png)
 
 
 SVM
@@ -611,7 +611,7 @@ sns.heatmap(svm_cm, annot=labels, fmt='', cmap="GnBu")
 
 
 
-![png]({{site.baseurl}}/images/models_files/models_34_2.png)
+![png](../images/models_files/models_34_2.png)
 
 
 LSTM
@@ -779,7 +779,7 @@ sns.heatmap(lstm_cm, annot=labels, fmt='', cmap="GnBu")
 
 
 
-![png]({{site.baseurl}}/images/models_files/models_43_2.png)
+![png](../images/models_files/models_43_2.png)
 
 
 #### **Conclusions**

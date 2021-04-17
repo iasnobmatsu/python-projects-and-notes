@@ -55,7 +55,7 @@ dassnetplot <- plot(dassnet, layout="spring", vsize=5, color="#bbd2fa", border.c
 
 Here is the image of the network. Thicker edges indicate stronger particial correlations among items. Cross-checking with the DASS scoring sheet, the items within the same subscale (depression, anxiety, stress) have stronger associations but some of them are also closely linked with items in other subscales. 
 
-![]({{site.baseurl}}/images/na_files/net.png)
+![](../images/na_files/net.png)
 
 
 #### **Centrality Plots**
@@ -98,14 +98,14 @@ Strength
 centralityPlot(dassnetplot, include ="Strength", orderBy = "Strength")
 ```
 
-![]({{site.baseurl}}/images/na_files/strength.png)
+![](../images/na_files/strength.png)
 
 Expected Influence
 
 ```r
 centralityPlot(dassnetplot, include ="ExpectedInfluence", orderBy = "ExpectedInfluence")
 ```
-![]({{site.baseurl}}/images/na_files/ei.png)
+![](../images/na_files/ei.png)
 
 Closeness
 
@@ -113,7 +113,7 @@ Closeness
 centralityPlot(dassnetplot, include ="Closeness", orderBy = "Closeness")
 ```
 
-![]({{site.baseurl}}/images/na_files/closeness.png)
+![](../images/na_files/closeness.png)
 
 Betweenness
 
@@ -121,7 +121,7 @@ Betweenness
 centralityPlot(dassnetplot, include ="Betweenness", orderBy = "Betweenness")
 ```
 
-![]({{site.baseurl}}/images/na_files/betweenness.png)
+![](../images/na_files/betweenness.png)
 
 
 #### **Network Stability and Node/Edge Difference**
@@ -173,10 +173,10 @@ plot(diffboot, "betweenness", order="sample", labels=T)
 
 ```
 
-![]({{site.baseurl}}/images/na_files/strenthdiff.png)
-![]({{site.baseurl}}/images/na_files/eidiff.png)
-![]({{site.baseurl}}/images/na_files/closenessdiff.png)
-![]({{site.baseurl}}/images/na_files/betweennessdiff.png)
+![](../images/na_files/strenthdiff.png)
+![](../images/na_files/eidiff.png)
+![](../images/na_files/closenessdiff.png)
+![](../images/na_files/betweennessdiff.png)
 
 
 #### **Network bridges**
@@ -192,7 +192,7 @@ bridgenet <- estimateNetwork(df, default="EBICglasso")
 
 bridgeplot <-plot(bridgenet, layout="spring", vsize=5, border.color="gray",groups=bridgegroups, color=c("#e8b6fa", "yellow"), legend.cex=.4)
 ```
-![]({{site.baseurl}}/images/na_files/bridgenet.png)
+![](../images/na_files/bridgenet.png)
 
 
 ```r
@@ -211,9 +211,9 @@ plot(brg, include = "Bridge Closeness", order="value")
 
 These plots show how connected each node in one community is to the other community using the centrality measures. The larger the bridge centrality values, the stronger this vertex is connected to the other community.
 
-![]({{site.baseurl}}/images/na_files/bridgestrength.png)
-![]({{site.baseurl}}/images/na_files/bridgebetween.png)
-![]({{site.baseurl}}/images/na_files/bridgeclose.png)
+![](../images/na_files/bridgestrength.png)
+![](../images/na_files/bridgebetween.png)
+![](../images/na_files/bridgeclose.png)
 
 #### **Network Compatison**
 
