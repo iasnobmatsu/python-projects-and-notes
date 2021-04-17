@@ -12,7 +12,7 @@
   - interactive visualization of poisson distribution with given parameters.
 - [Network analysis in R](files/notebooks/posts/2020-12-06-network-analysis.md)
   - building psychological networks in R, interpreting networks, network invariances, and bridges among network communities
-- [factor analysis notes](files/notebooks/posts/2020-12-05-factor-analysis-introduction-notes.md)
+- [factor analysis notes](files/notebooks/posts/2020-12-05-factor-analysis-introduction-notes.pdf)
   - my notes from learning factor analysis within psychology
 - [R basic notes](files/notebooks/posts/2020-12-03-R-basics-cheetsheet.md)
   - notes for using R basics from STOR455
