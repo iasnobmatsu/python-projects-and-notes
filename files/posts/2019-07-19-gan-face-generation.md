@@ -1,9 +1,4 @@
----
-layout: post
-title:  "Generative Adversarial Net Face Generation"
-date: 2019-7-19
-excerpt: "implementing GAN using tenserflow and generating celebrity faces on small scale with relatively low resolutions and small image sizes in python"
----
+
 
 This is my kaggle kernal from [here](https://www.kaggle.com/iasnobmatsu/gan-face-generation).
 
@@ -48,7 +43,7 @@ for i in range (30):
 ```
 
 
-![png]({{site.baseurl}}/images/gan-face-generation_files/gan-face-generation_3_0.png)
+![png](../images/gan-face-generation_files/gan-face-generation_3_0.png)
 
 
 #### Data Cleaning 
@@ -90,7 +85,7 @@ for i in range (30):
 ```
 
 
-![png]({{site.baseurl}}/images/gan-face-generation_files/gan-face-generation_6_0.png)
+![png](../images/gan-face-generation_files/gan-face-generation_6_0.png)
 
 
 
@@ -333,7 +328,7 @@ for i in range(64):
 ```
 
 
-![png]({{site.baseurl}}/images/gan-face-generation_files/gan-face-generation_24_0.png)
+![png](../images/gan-face-generation_files/gan-face-generation_24_0.png)
 
 
 
@@ -346,7 +341,7 @@ for i in range(64):
 ```
 
 
-![png]({{site.baseurl}}/images/gan-face-generation_files/gan-face-generation_25_0.png)
+![png](../images/gan-face-generation_files/gan-face-generation_25_0.png)
 
 
 
@@ -359,7 +354,7 @@ for i in range(64):
 ```
 
 
-![png]({{site.baseurl}}/images/gan-face-generation_files/gan-face-generation_26_0.png)
+![png](../images/gan-face-generation_files/gan-face-generation_26_0.png)
 
 
 
