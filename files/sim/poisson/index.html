@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='style.css'>
+    <title>Poisson simulation</title>
+</head>
+
+<body>
+
+    <br>
+    <br>
+
+    <h1 class='text-uppercase font-weight-light text-center'>Poisson Distribution Simulation</h1>
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <label for"lam">λ</label>
+                <input type="text" id='lam' class="form-control" placeholder="4">
+            </div>
+            <div class="col">
+                <label for"left">lower</label>
+                <input type="text" id='left' class="form-control" placeholder="0">
+            </div>
+            <div class="col">
+                <label for"right">upper</label>
+                <input type="text" id='right' class="form-control" placeholder="13">
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <button class='btn btn-light btn-sm' id='submit'>Submit</button>
+        </div>
+    </form>
+
+    <svg class='bar-chart' width="960px" height='500px'></svg>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <form>
+        <h3 class='text-uppercase font-weight-light text-center'>Poisson Calculator</h3>
+        <p>Poisson Distribution pdf formula is  \[P(x) = {\lambda ^xe^{-\lambda } \over x!}.\]</p>
+        <div class="form-row">
+            <div class="col">
+                <label for="lam2">λ</label>
+                <input type="text" id='lam2' class="form-control" placeholder="λ">
+            </div>
+            <div class="col">
+                <label for="x">x</label>
+                <input type="text" id='x-val' class="form-control" placeholder="x">
+            </div>
+           
+        </div>
+        <br>
+        <div class="form-group">
+            <button class='btn btn-light btn-sm' id='calc'>Calculate</button>
+        </div>
+        <p id='poisson-result'></p>
+    </form>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src='script.js'></script>
+
+</body>
+
+</html>
