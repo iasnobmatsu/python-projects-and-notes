@@ -2,6 +2,8 @@
 
 - [Natural language processing for tweet classification](files/notebooks/posts/2020-08-15-tweet-classification-with-Natural-Language-Processing.md)
   - text cleaning using regular expressions, NLP visuLization with wordclouds, naive bayes, logistic regression, and LSTM models for binary text classification in python
+- [Covid Vaccine Progress Visualization](https://www.kaggle.com/iasnobmatsu/covid-19-vaccine-progress)  
+  - with R, ggplot2, and map
 - [Realistic face generation using generative adversarial network](files/notebooks/posts/2019-07-19-gan-face-generation.md)
   - celebrity face generation using python and generative adversarial network with tensorflow
 - [Web data scraping with Python and Beautiful Soup](files/notebooks/posts/2020-12-30-Web-Scraping-with-Python-Using-MyAnimeList-as-An-Example.md)
